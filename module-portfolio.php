@@ -2,7 +2,11 @@
           <div class="container">
           <div class="row">
           <div class="col-lg-12 text-center">
+          <?php if(is_front_page()): ?>
           <h2>Portfolio</h2>
+     <?php else: ?>
+         <div class="page-header"> <h2><?php the_title(); ?></h2></div>
+     <?php endif; ?>
           <hr class="star-primary">
           </div>
           </div>
