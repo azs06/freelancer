@@ -22,7 +22,7 @@ $args['help'] = array(
   ),
   array(
     'context'      => 'edit',
-    'message'      => 'Edit Porfolio'
+    'message'      => 'Edit Portfolio'
   )
 );
 $PostType = new Bamboo_Custom_Post_Type($args);

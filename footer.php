@@ -72,11 +72,7 @@ $dribbble = of_get_option('freelancer_db','https://dribbble.com/');
            ?>
     <?php if(have_posts()): while($the_query->have_posts()): $the_query->the_post();  ?>       
     <div class="portfolio-modal modal fade" id="portfolio<?php the_ID(); ?>" tabindex="-1" role="dialog" aria-hidden="true">
-                   <?php
-      $thumbnail_id = get_post_thumbnail_id();
-      $thumbnail_url = wp_get_attachment_image_src($thumbnail_id,'thumbnail-size',true);
-      $thumbnail_meta = get_post_meta( $thumbnail_id, '_wp_attachment_image_alt', true);
-       ?>
+       
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -88,6 +84,11 @@ $dribbble = of_get_option('freelancer_db','https://dribbble.com/');
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
+                       <?php
+                    $thumbnail_id = get_post_thumbnail_id();
+                    $thumbnail_url = wp_get_attachment_image_src($thumbnail_id,'thumbnail-size',true);
+                    $thumbnail_meta = get_post_meta( $thumbnail_id, '_wp_attachment_image_alt', true);
+                       ?>
                             <h2><?php the_title(); ?></h2>
                             <hr class="star-primary">
                             <img src="<?php echo $thumbnail_url[0]; ?>" class="img-responsive img-centered" alt="<?php echo $thumbnail_meta; ?>" >
