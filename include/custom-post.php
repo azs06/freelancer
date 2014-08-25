@@ -13,7 +13,7 @@ $args['options'] = array(
   'public'         => true,
   'hierarchical'   => false,
   'supports'       => array('title', 'editor', 'thumbnail','thumbnail'),
-  'has_archive'    => true
+  'has_archive'    => false
 );
 
 $args['help'] = array(
@@ -22,7 +22,7 @@ $args['help'] = array(
   ),
   array(
     'context'      => 'edit',
-    'message'      => 'Edit Portfolio'
+    'message'      => 'Edit portfolio'
   )
 );
 $PostType = new Bamboo_Custom_Post_Type($args);
